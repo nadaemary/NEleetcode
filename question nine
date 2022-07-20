@@ -1,0 +1,52 @@
+____________________________________________________________________c++_________________________________________________________________________________________ 
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+bool isPol(int x){
+    string s = to_string(x);
+    int i = 0;
+    int j = s.length() -1;
+    while (i < j){
+        if (s[i] == s[j]){
+            i++;
+            j--;
+        }
+        else {
+            return false;
+        }
+    }
+    return true;
+
+}
+
+int main()
+{
+    bool obj = isPol(121);
+    cout << obj<<endl;
+
+
+    return 0;
+}
+
+_______________________________________________________________________________python_____________________________________________________________________________
+
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        s= str(x)
+        i= 0
+        j=len(str(x))-1
+        while i < j:
+            if s[i] == s[j]:
+                i = i+1
+                j = j-1
+            else: 
+                return False
+            
+        return True
